@@ -17,6 +17,17 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * 参考资料
+ *
+ * - https://stackoverflow.com/questions/12168624/pagination-response-payload-from-a-restful-api
+ * - https://segmentfault.com/q/1010000000603084/a-1020000000635842
+ * - http://blog.csdn.net/ie8848520/article/details/8161986
+ * - https://www.programcreek.com/java-api-examples/index.php?api=org.springframework.data.domain.Page
+ * - http://www.importnew.com/24514.html
+ * - https://github.com/eugenp/tutorials/blob/master/spring-rest-query-language/src/main/java/org/baeldung/web/util/SearchCriteria.java
+ *
+ */
 @RestController
 @RequestMapping(path = "/employees")
 public class EmployeeController {
