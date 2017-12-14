@@ -26,6 +26,8 @@ import org.springframework.web.bind.annotation.*;
  * - https://www.programcreek.com/java-api-examples/index.php?api=org.springframework.data.domain.Page
  * - http://www.importnew.com/24514.html
  * - https://github.com/eugenp/tutorials/blob/master/spring-rest-query-language/src/main/java/org/baeldung/web/util/SearchCriteria.java
+ * - ResponseEntity
+ * https://stackoverflow.com/questions/33953287/spring-boot-rest-webservice-jpa-pageable-and-filter
  *
  */
 @RestController
