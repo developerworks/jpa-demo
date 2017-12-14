@@ -20,10 +20,12 @@ public class JpaDemoApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Employee employee = new Employee();
-        employee.setName("苍老师");
-        employee.setSalary(800000);
-        employee.setType(EmployeeType.CONTRACT);
-        employeeRepository.save(employee);
+        for (int i = 0; i < 10; i++) {
+            Employee employee = new Employee();
+            employee.setName("Employee Name");
+            employee.setSalary(800000);
+            employee.setType(EmployeeType.CONTRACT);
+            employeeRepository.save(employee);
+        }
     }
 }
