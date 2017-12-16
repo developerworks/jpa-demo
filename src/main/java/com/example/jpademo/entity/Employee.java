@@ -4,6 +4,8 @@ import com.example.jpademo.util.EmployeeType;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.mongo.MongoProperties;
 
 import javax.persistence.*;
 
@@ -11,6 +13,7 @@ import javax.persistence.*;
 @Setter
 @Getter
 @GenericGenerator(strategy = "uuid", name = "system-uuid")
+@org.hibernate.annotations.Table(appliesTo = "employee", comment = "员工信息")
 public class Employee {
     @Id
     @GeneratedValue(generator = "system-uuid")
