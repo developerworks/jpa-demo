@@ -6,7 +6,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>jpa-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>jpa-demo</name>
 	<description>Demo project for Spring Boot</description>
@@ -25,6 +25,15 @@
 	</properties>
 
 	<dependencies>
+		<!--
+		https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html
+		打包可独立运行, 可部署到外部容器的WAR
+		-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>

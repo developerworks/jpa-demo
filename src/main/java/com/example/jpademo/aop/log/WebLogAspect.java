@@ -15,10 +15,17 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
 import java.util.Enumeration;
 
+/**
+ * 参考资料:
+ * - http://www.iteye.com/topic/1144325
+ */
 @Component
 @Aspect
 public class WebLogAspect {
+
     private Logger logger = LoggerFactory.getLogger(WebLogAspect.class);
+
+    ThreadLocal<Long> startTime = new ThreadLocal<Long>();
 
     /**
      * 切面
@@ -29,10 +36,12 @@ public class WebLogAspect {
 
     /**
      * 切点
+     *
      * @param joinPoint
      */
     @Before("log()")
-    public void beforeLog(JoinPoint joinPoint) {
+    public void doBefore(JoinPoint joinPoint) {
+        startTime.set(System.currentTimeMillis());
         // 接收到请求，记录请求内容
         logger.info("WebLogAspect.doBefore()");
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
@@ -55,5 +64,6 @@ public class WebLogAspect {
     public void doAfterReturning(JoinPoint joinPoint) {
         // 处理完请求，返回内容
         logger.info("WebLogAspect.doAfterReturning()");
+        logger.info("耗时（毫秒） : " + (System.currentTimeMillis() - startTime.get()));
     }
 }
