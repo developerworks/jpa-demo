@@ -1,4 +1,4 @@
-package com.example.jpademo.controller;
+package com.example.jpademo.aop.log;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
