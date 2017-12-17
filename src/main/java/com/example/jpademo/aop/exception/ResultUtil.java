@@ -8,8 +8,8 @@ public class ResultUtil {
      * @param object
      * @return
      */
-    public static Result success(Object object) {
-        Result result = new Result();
+    public static Result<Object> success(Object object) {
+        Result<Object> result = new Result<>();
         result.setStatus(0);
         result.setMsg("success");
         result.setData(object);
@@ -21,7 +21,7 @@ public class ResultUtil {
      *
      * @return
      */
-    public static Result success() {
+    public static Result<Object> success() {
         return success(null);
     }
 
@@ -32,8 +32,8 @@ public class ResultUtil {
      * @param msg
      * @return
      */
-    public static Result error(Integer code, String msg) {
-        Result result = new Result();
+    public static Result<Object> error(Integer code, String msg) {
+        Result<Object> result = new Result<>();
         result.setStatus(code);
         result.setMsg(msg);
         result.setData(null);
@@ -46,8 +46,8 @@ public class ResultUtil {
      * @param exceptionEnum
      * @return
      */
-    public static Result error(ExceptionEnum exceptionEnum) {
-        Result result = new Result();
+    public static Result<Object> error(ExceptionEnum exceptionEnum) {
+        Result<Object> result = new Result<>();
         result.setStatus(exceptionEnum.getCode());
         result.setMsg(exceptionEnum.getMsg());
         result.setData(null);
