@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+http://blog.csdn.net/shangmingtao/article/details/77517177
+-->
 <configuration scan="true" scanPeriod="60 seconds" debug="false">
     <contextName>logback</contextName>
     <property name="log.path" value="/tmp/logback-jpa-demo.log"/>

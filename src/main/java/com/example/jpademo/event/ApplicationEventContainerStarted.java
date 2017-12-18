@@ -5,7 +5,7 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 
 /**
- * Spring 容器启动完成
+ * Spring 容器启动完成事件
  * <p>
  * 参考资料
  * <p>
