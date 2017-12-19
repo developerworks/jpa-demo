@@ -23,6 +23,9 @@ import java.io.Serializable;
  */
 
 @Entity
+@EntityListeners({
+    UserDetailsListener.class
+})
 @NamedNativeQueries(value = {
     @NamedNativeQuery(
         name = "UserDetailsByUsername",
