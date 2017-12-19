@@ -23,7 +23,10 @@ public class UserDetailsQuery {
      * - @PersistenceContext 结合中的对象是受托管的, 也就是被 EntityManager 管理的实体对象. 当 @PersistenceContext 被关闭时,
      * 受托管的实体对象全部脱离实体管理器的管理, 成为非托管对象(游离状态). 这个时候任何之前的受托管对象的状态变化不再会同步数据库.
      */
-//    @PersistenceContext(unitName = "UserDetailsService")
+    // TODO::
+    // 1. PersistenceContext 的机制还没有搞清楚, 现在暂时使用 @Autowired
+    // 2. 弄清楚 注解为 PersistenceContext 的实体管理器和 @Autowired 注入的有什么不同?
+    // @PersistenceContext(unitName = "UserDetailsService")
     @Autowired
     EntityManager entityManager;
 
