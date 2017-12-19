@@ -19,7 +19,7 @@ http://blog.csdn.net/shangmingtao/article/details/77517177
     <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${log.path}</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>logback.%d{yyyy-MM-dd-hh-mm}.log</fileNamePattern>
+            <fileNamePattern>/tmp/logback.%d{yyyy-MM-dd-hh-mm}.log</fileNamePattern>
         </rollingPolicy>
         <append>true</append>
         <encoder>
