@@ -23,4 +23,5 @@ public class UserDetailsListener {
             throw new ValidationException("The length of username at least 6 chars.");
         }
     }
+
 }
