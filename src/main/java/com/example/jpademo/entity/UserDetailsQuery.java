@@ -4,8 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -15,7 +13,7 @@ import java.util.List;
  */
 
 @Component
-public class UserDetailsQuery implements Serializable {
+public class UserDetailsQuery {
     /**
      * 注解 @PersistenceContext 表示实体对象实例所构成的集合, 实体管理器跟踪这个集合中所有实体的状态(CRUD)
      * 可以指定刷新模式, 把状态变化的对象同步到数据库中.
